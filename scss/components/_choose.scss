@@ -1,0 +1,85 @@
+.choose {
+  &__title {
+    font: var(--heading-2);
+    color: var(--c-Paragraph);
+    text-align: center;
+  }
+
+  &__desc {
+    font: var(--Paragraph);
+    color: var(--c-Paragraph);
+    text-align: center;
+
+    margin-top: 70rem;
+    margin-bottom: 123rem;
+    max-width: 837rem;
+    margin-inline: auto;
+    @include desktop-small {
+      margin-top: 60rem;
+      margin-bottom: 90rem;    
+    }
+    @include tablet {
+      margin-top: 50rem;
+      margin-bottom: 80rem;  
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(293rem, 1fr));
+    gap: 27rem;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    // @include mobile {
+    //   grid-template-columns: 1fr;
+    // }
+  }
+
+  &__item {
+    border-radius: 20rem;
+    background: var(--c-terciary);
+    padding: 44rem 39rem 33rem;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      padding: 25rem;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: 13rem;
+        margin-bottom: 25rem;
+        @include tablet {
+          margin-bottom: 10rem;
+        }
+    
+    }
+    &__name {
+        display: flex;
+        flex-direction: column;
+        font: var(--Button);
+        color: var(--c-Paragraph);
+        margin-bottom: 3rem;
+    }
+    &__position {
+        font: var(--Paragraph);
+        color: var(--c-text);
+    }
+    &__desc {
+        font: var(--Paragraph);
+        color: var(--c-text);
+        margin-bottom: 28rem;
+    }
+    &__btn {
+        color: var(--c-terciary);
+        border-radius: 50rem;
+        padding: 11rem 49rem;
+        @include tablet {
+          padding: 11rem 22rem;
+          margin-right: auto;
+        }
+    }
+  }
+}

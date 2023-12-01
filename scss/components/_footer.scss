@@ -1,0 +1,114 @@
+.footer {
+  background: #f9f1fe;
+
+  &__container {
+    position: relative;
+    padding: 106rem 20rem 81rem 20rem;
+    display: grid;
+    gap: 108rem;
+
+    grid-template-columns: auto 1fr 1fr;
+    @include desktop-small {
+      gap: 50rem;
+    }
+    @include tablet {
+      padding: 80rem 20rem 81rem 20rem;
+
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas: "brand brand" "contact hour";
+      align-items: center;
+      justify-content: center;
+
+      gap: 50rem;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "brand"
+        "contact"
+        "hour";
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__brand {
+    max-width: 431rem;
+    @include tablet {
+      grid-area: brand;
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &__contact {
+    @include tablet {
+      grid-area: contact;
+    }
+  }
+
+  &__copy {
+    position: absolute;
+    bottom: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #575757;
+  }
+
+  &__logo {
+    color: var(--c-Paragraph);
+    font: var(--Heading-4);
+    margin-bottom: 26rem;
+    display: inline-block;
+  }
+
+  &__desc {
+    color: var(--c-Paragraph);
+    font: var(--Paragraph);
+  }
+}
+
+.footer-info {
+  &:not(:last-child) {
+    margin-bottom: 27rem;
+  }
+
+  &__title {
+    color: var(--c-Paragraph);
+    font: var(--Button);
+    margin-bottom: 9rem;
+  }
+
+  &__value {
+    color: var(--c-Paragraph);
+    font: var(--Paragraph);
+    display: inline-flex;
+    gap: 16rem;
+
+    a {
+      color: var(--c-Paragraph);
+    }
+  }
+}
+
+.footer-hours {
+  @include tablet {
+    grid-area: hour;
+  }
+
+  &__title {
+    color: var(--c-Paragraph);
+    font: var(--Button);
+    margin-bottom: 17rem;
+  }
+
+  &__value {
+    color: var(--c-Paragraph);
+    font: var(--Paragraph);
+
+    &:not(:last-child) {
+      margin-bottom: 15rem;
+    }
+  }
+}

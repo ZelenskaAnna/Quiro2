@@ -1,0 +1,54 @@
+html {
+  background: var(--c-white);
+	font-size: var(--html-fs);
+	scroll-behavior: smooth;
+  @include tablet {
+    font-size: calc(var(--html-fs)*0.9);
+  }
+  @include mobile {
+    font-size: calc(var(--html-fs)*0.8);
+  }
+}
+
+body {
+	font-size: 16rem;
+	font-family: var(--ff);
+}
+
+// html._overflow {
+//   overflow: hidden;
+
+//   body {
+//     overflow: hidden;
+//   }
+// }
+
+.container {
+	max-width: calc(1170rem + 40rem);
+	padding: 0 20rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+section {
+  margin-top: 111rem;
+  @include desktop-small {
+    margin-top: 90rem;
+  }
+  @include tablet {
+    margin-top: 70rem;
+  }
+}
+
+.btn {
+  background: var(--c-primary);
+  font: var(--Button);
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  @include tablet {
+    font: calc(var(--Button)*0.8);
+  }
+
+}
